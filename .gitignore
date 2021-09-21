@@ -1,0 +1,16 @@
+*.egg*
+tags
+venv
+build/
+dist/
+__pycache__
+**/*.pyc
+**/.idea
+solution-*
+plugin-*
+limepkg-*
+.vscode
+
+docker-compose.override.yml
+pip-wheel-metadata
+db.sqlite3

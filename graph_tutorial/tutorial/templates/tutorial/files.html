@@ -1,0 +1,32 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <CalendarSnippet> -->
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>Files</h1>
+<a href="/files/new" class="btn btn-light btn-sm mb-3">New file</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Size</th>
+      <th scope="col">Created</th>
+      <th scope="col">Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if files %}
+      {% for file in files %}
+        <tr>
+          <td><a href="{{ file.webUrl }}">{{ file.name }}</a></td>
+          <td>{{ file.size }}</td>
+          <td>{{ file.createdDateTime|date:'Y-m-d H:i' }}</td>
+          <td>{{ file.lastModifiedDateTime|date:'Y-m-d H:i' }}</td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock %}
+<!-- </CalendarSnippet> -->

@@ -31,7 +31,6 @@ def get_files(token):
 
     query_params = {
         "$select": "id, name, etag, createdDateTime, lastModifiedDateTime, webUrl, size, cTag, file",
-        "$orderby": "lastModifiedDateTime",
         "$top": "50",
     }
 

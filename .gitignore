@@ -14,3 +14,4 @@ limepkg-*
 docker-compose.override.yml
 pip-wheel-metadata
 db.sqlite3
+oauth_settings.yml
